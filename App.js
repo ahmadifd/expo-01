@@ -1,32 +1,22 @@
-import { StyleSheet } from "react-native";
-import { PaperProvider } from "react-native-paper";
+import { StyleSheet, View } from "react-native";
 import MessagesScreen from "./app/screens/MessagesScreen";
+import { List } from "react-native-paper";
+import AccountScreen from "./app/screens/AccountScreen";
+import ListItem from "./app/components/ListItem";
+import { Avatar } from "react-native-paper";
 import Screen from "./app/components/Screen";
+import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
+import ViewImageScreen from "./app/screens/ViewImageScreen";
+import WelcomeScreen from "./app/screens/WelcomeScreen";
+import ListingsScreen from "./app/screens/ListingsScreen";
 
 export default function App() {
   console.log("Hello Farshid Ahmadi");
 
-  return (
-    <PaperProvider>
-      <MessagesScreen />
-    </PaperProvider>
-  );
+  return <AccountScreen />;
 }
 
 const styles = StyleSheet.create({});
 {
-  /* <View
-        style={{ backgroundColor: "#f8f4f4", padding: 20, paddingTop: 100 }}
-      >
-        <Card>
-          <Card.Cover source={jacket} />
-          <Card.Title
-            subtitleStyle={{ color: colors.secondary }}
-            style={{}}
-            title="Red jacker for Sale"
-            subtitle="$100"
-          ></Card.Title>
-        </Card>
- 
-      </View> */
+
 }
