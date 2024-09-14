@@ -11,8 +11,11 @@ import ListItemDeleteAction from "../components/ListItemDeleteAction";
 const initialMessages = [
   {
     id: 1,
-    title: "T1",
-    description: "D1",
+    title: ` wertwertwer wert wer /r/r/r/n/n/n//r//r//n//n
+     wertwertwer wert we`,
+    description: ` wertwertwer wert wer
+    wert wert wert wert wert
+    t wertwer twert wert wert wer`,
     image: mosh,
   },
   {
@@ -32,10 +35,9 @@ const MessagesScreen = () => {
         keyExtractor={(message) => message.id.toString()}
         renderItem={({ item }) => (
           <ListItem
-           
             image={item.image}
             title={item.title}
-            description={item.description}
+            subTitle={item.description}
             onPress={() => {
               console.log("onPress", item);
             }}
