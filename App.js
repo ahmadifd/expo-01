@@ -12,10 +12,11 @@ import ListingsScreen from "./app/screens/ListingsScreen";
 import { useState } from "react";
 import { Picker } from "@react-native-picker/picker";
 import LoginScreen from "./app/screens/LoginScreen";
+import ListingEditScreen from "./app/screens/ListingEditScreen";
 
 export default function App() {
   console.log("Hello Farshid Ahmadi");
-  return <LoginScreen />;
+  return <ListingEditScreen/>;
 }
 
 const styles = StyleSheet.create({});

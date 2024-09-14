@@ -7,6 +7,7 @@ import { Button } from "react-native-paper";
 import colors from "../config/colors";
 import { Formik } from "formik";
 import * as Yup from "yup";
+import AppFormField from "../components/AppFormField";
 
 const validationSchema = Yup.object().shape({
   email: Yup.string().required().email().label("Email"),
@@ -33,40 +34,30 @@ const LoginScreen = () => {
           onSubmit={(values) => console.log(values)}
           validationSchema={validationSchema}
         >
-          {({ handleChange, handleSubmit, errors }) => (
+          {({
+            handleSubmit,
+          }) => (
             <>
-              <TextInput
+              <AppFormField
+                name="email"
                 mode="outlined"
-                onChangeText={handleChange("email")}
                 label="Email"
                 autoCapitalize="none"
                 keyboardType="email-address"
                 textContentType="emailAddress"
                 autoCorrect={false}
                 right={<TextInput.Icon icon="email" />}
-                error={errors.email}
               />
-              {errors.email && (
-                <HelperText type="error" visible={errors.email}>
-                  {errors.email}
-                </HelperText>
-              )}
-              <TextInput
+              <AppFormField
+                name="password"
                 mode="outlined"
-                onChangeText={handleChange("password")}
                 label="Password"
                 autoCapitalize="none"
                 secureTextEntry
                 textContentType="password"
                 autoCorrect={false}
                 right={<TextInput.Icon icon="lock" />}
-                error={errors.password}
               />
-              {errors.password && (
-                <HelperText type="error" visible={errors.password}>
-                  {errors.password}
-                </HelperText>
-              )}
               <Button
                 buttonColor={colors.primary}
                 style={{ marginTop: 15 }}
